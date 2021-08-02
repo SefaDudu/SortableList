@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    .list-group .list-group-item {
+  border-radius: 0;
+  cursor: move;
+}
+
+.list-group .list-group-item:hover {
+  background-color: #f7f7f7;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-9 col-xl-10 order-2 order-sm-1 mt-3">
+            <h2 class="h6"><strong>Sortable List</strong></h2>
+            <div id="sortablelist" class="list-group mb-4 mt-3" data-id="1">
+              <div class="list-group-item d-flex align-items-center justify-content-between" data-id="2">
+                <div>
+                  <p class="mb-0 d-inline-flex align-items-center">
+                    List 1</p>
+                </div>
+              </div>
+              <div class="list-group-item d-flex align-items-center justify-content-between" data-id="3">
+                <div>
+                  <p class="mb-0 d-inline-flex align-items-center">
+                    List  2</p>
+                </div>
+              </div>
+              <div class="list-group-item d-flex align-items-center justify-content-between" data-id="4" style="">
+                <div>
+                  <p class="mb-0 d-inline-flex align-items-center">
+                    List 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+<script src="https://raw.githack.com/SortableJS/Sortable/master/Sortable.js"></script>
+      <script>  
+     new Sortable(sortablelist, {
+   animation: 150,
+   ghostClass: 'sortable-ghost'
+ });
+ </script>
+</html>
